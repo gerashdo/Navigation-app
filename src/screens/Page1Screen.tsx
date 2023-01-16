@@ -10,7 +10,7 @@ export const Page1Screen = ({ navigation }: Props) => {
 
   return (
     <View style={ appStyles.globalMargin }>
-        <Text>
+        <Text style={ appStyles.title }>
             Page1Screen
         </Text>
         <Button 
