@@ -31,4 +31,15 @@ export const appStyles = StyleSheet.create({
         width: 75,
         borderRadius: 100
     },
+    menuContainer: {
+        marginVertical: 30,
+        marginHorizontal: 50,
+        gap: 20
+    },
+    menuItem: {},
+    menuItemText: {
+        fontSize: 20,
+        fontWeight: '500'
+    }
+
 })
