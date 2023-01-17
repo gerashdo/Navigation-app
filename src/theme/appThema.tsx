@@ -21,5 +21,14 @@ export const appStyles = StyleSheet.create({
         fontSize: 18,
         color: 'white',
         fontWeight: 'bold',
-    }
+    },
+    avatarContainer:{
+        alignItems: 'center',
+        marginTop: 20,
+    },
+    avatar: {
+        height: 75,
+        width: 75,
+        borderRadius: 100
+    },
 })
