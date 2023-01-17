@@ -6,6 +6,7 @@ import { StackNavigator } from './StackNavigator';
 import { colors } from '../theme/appThema';
 import { Platform, Text } from 'react-native';
 import { TopTabsNavigator } from './TopTabsNavigator';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export const Tabs = () => {
 
@@ -32,17 +33,20 @@ export const TabAndroid = ()=>  {
                 let iconName = ''
                 switch( route.name ){
                     case 'TabScreen1':
-                        iconName='T1'
+                        iconName = 'caret-up'
                         break
                     case 'TabScreen2':
-                        iconName='T1'
+                        iconName='caret-forward-circle'
                         break
                     case 'Stack':
-                        iconName='T1'
+                        iconName='copy'
                         break
-                }
+                    default:
+                        iconName='alert-circle'
+                        break
+                    }
 
-                return <Text style={{ color }}>{ iconName }</Text>
+                return <Icon name={ iconName } size={ 20 } color={ color }/>
             }
         })}
     >
@@ -83,17 +87,20 @@ export const TabIOS = () => {
                 let iconName = ''
                 switch( route.name ){
                     case 'TabScreen1':
-                        iconName='T1'
+                        iconName = 'caret-up'
                         break
                     case 'TabScreen2':
-                        iconName='T1'
+                        iconName='caret-forward-circle'
                         break
                     case 'Stack':
-                        iconName='T1'
+                        iconName='copy'
                         break
-                }
+                    default:
+                        iconName='alert-circle'
+                        break
+                    }
 
-                return <Text style={{ color }}>{ iconName }</Text>
+                return <Icon name={ iconName } size={ 20 } color={ color }/>
             }
         })}
     >

@@ -4,7 +4,7 @@ import { ChatsScreen } from '../screens/ChatsScreen';
 import { ContactsScreen } from '../screens/ContactsScreen';
 import { AlbumsScreen } from '../screens/AlbumsScreen';
 import { colors } from '../theme/appThema';
-import { Text } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -23,20 +23,17 @@ export const TopTabsNavigator = () => {
                 shadowColor: 'transparent'
             },
             tabBarIcon: ({ focused, color }) => {
-                let iconName = ''
+                
                 switch( route.name ){
                     case 'ChatsScreen':
-                        iconName='Ch'
-                        break
+                        return <Icon name='logo-whatsapp' size={ 20 } color={ color }/>
                     case 'ContactsScreen':
-                        iconName='Co'
-                        break
+                        return <Icon name='people' size={ 20 } color={ color }/>
                     case 'AlbumsScreen':
-                        iconName='Al'
-                        break
+                        return <Icon name='podium' size={ 20 } color={ color }/>
+                    default:
+                        return <Icon name='alert-circle' size={ 20 } color={ color }/>
                 }
-
-                return <Text style={{ color }}>{ iconName }</Text>
             }
         })}
     >

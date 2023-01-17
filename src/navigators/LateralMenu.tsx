@@ -2,8 +2,10 @@ import React from 'react'
 import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentScrollView } from '@react-navigation/drawer';
 import { SettingsScreen } from '../screens/SettingsScreen';
 import { Image, Text, TouchableOpacity, useWindowDimensions, View } from 'react-native';
-import { appStyles } from '../theme/appThema';
+import { appStyles, colors } from '../theme/appThema';
 import { Tabs } from './Tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 
 const Drawer = createDrawerNavigator();
 
@@ -43,16 +45,28 @@ const InnerLateralMenuContent = ( { navigation }: DrawerContentComponentProps ) 
       <View style={ appStyles.menuContainer }>
         <TouchableOpacity 
           onPress={ () => navigation.navigate('Tabs')}
-          style={ appStyles.menuItem }
+          style={{ 
+            ...appStyles.menuItem,
+            flexDirection: 'row',
+            gap: 5,
+          
+          }}
         >
+          <Icon name='compass' size={ 25 } color="black"/>
           <Text style={ appStyles.menuItemText }>
             Navegacion
           </Text>
         </TouchableOpacity>
         <TouchableOpacity 
           onPress={ () => navigation.navigate('SettingsScreen')}
-          style={ appStyles.menuItem }
+          style={{ 
+            ...appStyles.menuItem,
+            flexDirection: 'row',
+            gap: 5,
+          
+          }}
         >
+          <Icon name='settings' size={ 25 } color="black"/>
           <Text style={ appStyles.menuItemText }>
             Ajustes
           </Text>
