@@ -3,6 +3,7 @@ import React from 'react'
 import { Text, View } from 'react-native'
 import { appStyles } from '../theme/appThema'
 import Icon from 'react-native-vector-icons/Ionicons';
+import { TouchableIcon } from '../components/TouchableIcon';
 
 
 export const TabScreen1 = () => {
@@ -12,9 +13,9 @@ export const TabScreen1 = () => {
             Icons
         </Text>
         <Text>
-          <Icon name="rocket" size={60} color="#900" />
-          <Icon name="arrow-back-circle" size={60} color="#900" />
-          <Icon name="chatbubble-ellipses" size={60} color="#900" />
+          <TouchableIcon iconName="rocket" />
+          <TouchableIcon iconName="arrow-back-circle" />
+          <TouchableIcon iconName="chatbubble-ellipses" />
         </Text>
     </View>
   )
