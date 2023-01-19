@@ -5,7 +5,7 @@ import { appStyles } from '../theme/appThema';
 
 export const ContactsScreen = () => {
 
-  const { signIn, authState } = useContext( AuthContext )
+  const { signIn, logout, authState } = useContext( AuthContext )
 
   return (
     <View style={ appStyles.globalMargin }>
@@ -14,7 +14,10 @@ export const ContactsScreen = () => {
         </Text>
         {
           authState.isLoggedIn 
-          ? null
+          ? <Button 
+            title='LogOut'
+            onPress={ logout }
+          />
           :(
             <Button 
               title='SignIn'
